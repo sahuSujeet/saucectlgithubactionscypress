@@ -1,0 +1,60 @@
+Sauce Cypress Runner 12.3.0
+Running Cypress 13.7.3
+Preparing npm environment
+Finished
+
+
+DevTools listening on ws://127.0.0.1:49803/devtools/browser/d4185a17-5743-4845-85fd-e1a05b76a120
+Missing baseUrl in compilerOptions. tsconfig-paths will be skipped
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        13.7.3                                                                         │
+  │ Browser:        Custom Chrome 125                                                              │
+  │ Node Version:   v20.12.1 (D:\sauce-cypress-runner\12.3.0\bundle\node.exe)                      │
+  │ Specs:          1 found (actions.cy.js)                                                        │
+  │ Searched:       cypress/e2e/examples/actions.cy.js                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  actions.cy.js                                                                   (1 of 1)
+
+
+  Actions
+    √ .type() - type into a DOM element
+
+
+  1 passing (5s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     5 seconds                                                                        │
+  │ Spec Ran:     actions.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ √  actions.cy.js                            00:05        1        1        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    √  All specs passed!                        00:05        1        1        -        -        -  
+

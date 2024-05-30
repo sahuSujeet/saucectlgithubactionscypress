@@ -1,0 +1,16 @@
+{
+  "name": "saucectl_setup_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.7.3",
+    "saucectl":"^0.175.1"
+  }
+}

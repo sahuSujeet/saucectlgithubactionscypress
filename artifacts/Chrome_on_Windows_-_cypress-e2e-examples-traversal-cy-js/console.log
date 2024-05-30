@@ -1,0 +1,60 @@
+Sauce Cypress Runner 12.3.0
+Running Cypress 13.7.3
+Preparing npm environment
+Finished
+
+
+DevTools listening on ws://127.0.0.1:49803/devtools/browser/21483317-a217-4c74-8d3e-84c150d6a388
+Missing baseUrl in compilerOptions. tsconfig-paths will be skipped
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        13.7.3                                                                         │
+  │ Browser:        Custom Chrome 125                                                              │
+  │ Node Version:   v20.12.1 (D:\sauce-cypress-runner\12.3.0\bundle\node.exe)                      │
+  │ Specs:          1 found (traversal.cy.js)                                                      │
+  │ Searched:       cypress/e2e/examples/traversal.cy.js                                           │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  traversal.cy.js                                                                 (1 of 1)
+
+
+  Traversal
+    √ .children() - get children of DOM elements
+
+
+  1 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     traversal.cy.js                                                                  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ √  traversal.cy.js                          00:04        1        1        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    √  All specs passed!                        00:04        1        1        -        -        -  
+
