@@ -11,6 +11,7 @@ env:
   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
   SAUCECTL_VERSION: 0.176.0
   BUILD_PREFIX: true
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Add this line
 
 jobs:
   build-web-app:
