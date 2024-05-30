@@ -16,11 +16,11 @@ jobs:
   build-web-app:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2   #which checks out your code into the virtual machine
+      - uses: actions/checkout@v4   # Updated to the latest version that uses Node.js 20
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Updated to the latest version that uses Node.js 20
         with:
-          node-version: '16.14.2'
+          node-version: '20'
       - name: Install Dependencies
         run: npm install
         # run: npm install -g yarn@berry
