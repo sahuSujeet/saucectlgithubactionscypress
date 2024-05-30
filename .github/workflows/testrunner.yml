@@ -1,0 +1,62 @@
+name: saucectl cypress tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+  SAUCECTL_VERSION: 0.176.0
+  BUILD_PREFIX: true
+
+jobs:
+  build-web-app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2   #which checks out your code into the virtual machine
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.14.2'
+      - name: Install Dependencies
+        # run: npm install
+        run: npm install -g yarn@berry
+      - name: Run build
+        env:
+          CI: false
+        # run: npm run build
+        run: yarn run build
+
+  # test-web-app:
+  #   runs-on: ubuntu-latest
+  #   needs: build-web-app
+  #   steps:
+  #     - name: Install Python
+  #       uses: actions/setup-python@v2
+  #       with:
+  #         python-version: 3.7
+  #     - name: Checkout GitHub App Code
+  #       uses: actions/checkout@v2
+  #     - name: Install Dependencies
+  #       # run: npm install
+  #       run: npm install -g yarn@berry
+  #     - name: Run Build
+  #       env: 
+  #         CI: false
+  #       # run: npm run build
+  #       run: yarn run build
+  #     - name: Download & Use Sauce Connect Tunnel
+  #       run: |
+  #         set -e
+  #         curl -L -s https://saucelabs.com/downloads/sauce-connect/5.1.0/sauce-connect-5.1.0_linux.x86_64.tar.gz | sudo tar -xz
+  #         sc-5.1.0-linux/bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i proxy-tunnel-$GITHUB_RUN_ID &
+  #     - name: Install Saucectl
+  #       run: |
+  #         curl -L -s https://github.com/saucelabs/saucectl/releases/download/v${SAUCECTL_VERSION}/saucectl_${SAUCECTL_VERSION}_linux_64-bit.tar.gz | sudo tar -xz -C /usr/bin/
+  #     - name: Saucectl Run
+  #       run: |
+  #         cd build && python3 -m http.server 8000 &
+  #         saucectl run -c ./.sauce/config.yml --tunnel-id proxy-tunnel-$GITHUB_RUN_ID --test-env sauce
