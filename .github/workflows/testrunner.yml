@@ -56,6 +56,8 @@ jobs:
       - name: Install Saucectl
         run: |
           curl -L -s https://github.com/saucelabs/saucectl/releases/download/v${SAUCECTL_VERSION}/saucectl_${SAUCECTL_VERSION}_linux_64-bit.tar.gz | sudo tar -xz -C /usr/bin/
-      - name: Saucectl Run
-        run: |
-          saucectl run -c ./.sauce/config.yml --tunnel-id proxy-tunnel-$GITHUB_RUN_ID --test-env sauce
+      # - name: Saucectl Run
+      #   run: |
+      #     saucectl run -c ./.sauce/config.yml --tunnel-id proxy-tunnel-$GITHUB_RUN_ID --test-env sauce
+      - name: Saucectl RUN
+        uses: saucelabs/saucectl-run-action@v3
