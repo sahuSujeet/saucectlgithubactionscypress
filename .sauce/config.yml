@@ -1,39 +1,9 @@
-# apiVersion: v1
-# kind: cypress
-# defaults: {}
-# showConsoleLog: false
-# sauce:
-#   region: us-west-1
-#   sauceignore: .sauceignore
-# cypress:
-#   configFile: cypress.config.js
-#   version: 13.7.3
-#   record: false
-#   key: ""
-#   reporters: []
-# suites:
-# - name: cypress - Windows 11 - chrome
-#   browser: chrome
-#   platformName: Windows 11
-#   config:
-#     testingType: e2e
-#     specPattern:
-#     - '**/*.*'
-# rootDir: .
-# artifacts:
-#   download:
-#     match:
-#     - '*'
-#     when: always
-#     directory: ./artifacts
-
-
 apiVersion: v1
 kind: cypress
 sauce:
   # region: us-west-1
   region: eu-central-1
-  concurrency: 10 # Controls how many suites are executed at the same time.
+  concurrency: 5 # Controls how many suites are executed at the same time.
   sauceignore: .sauceignore
   # metadata:
   #   tags:

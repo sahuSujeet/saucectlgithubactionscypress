@@ -49,6 +49,10 @@ jobs:
       #     CI: false
       #   run: npm run build
         # run: yarn run build
+      - name: Start Local Server
+        run: |
+          npm run start &  # Start your local server in the background
+          sleep 5  # Wait a few seconds for the server to start
       - name: Download & Use Sauce Connect Tunnel  # Set up a Sauce Connect Proxy tunnel.
         run: |
           set -e
@@ -62,3 +66,14 @@ jobs:
       #     saucectl run -c ./.sauce/config.yml --tunnel-id proxy-tunnel-$GITHUB_RUN_ID --test-env sauce
       - name: Saucectl RUN
         uses: saucelabs/saucectl-run-action@v3
+        # with:
+        #   saucectl-version: latest
+        #   working-directory: .
+        #   config-file: .sauce/config.yml
+        #   skip-run: false
+        #   showConsoleLog: false
+        #   async: false
+        # env:
+        #   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+        #   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
